@@ -1,0 +1,7 @@
+{
+  "cmake.sourceDirectory": "${workspaceFolder}/src",
+  "cmake.configureSettings": {
+    "CMAKE_TOOLCHAIN_FILE": "${workspaceFolder}/src/external/vcpkg/scripts/buildsystems/vcpkg.cmake",
+    "VCPKG_BUILD": "ON"
+  }
+}
