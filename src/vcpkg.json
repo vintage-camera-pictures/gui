@@ -1,5 +1,12 @@
 {
   "name": "gui",
   "version": "0.1.0",
-  "dependencies": ["fmt"]
+  "dependencies": [
+    {
+      "name": "imgui",
+      "features": ["docking-experimental", "glfw-binding", "opengl3-binding"]
+    },
+    "glfw3",
+    "glad"
+  ]
 }

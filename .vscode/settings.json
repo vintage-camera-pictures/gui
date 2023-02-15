@@ -1,7 +1,37 @@
 {
   "cmake.sourceDirectory": "${workspaceFolder}/src",
   "cmake.configureSettings": {
-    "CMAKE_TOOLCHAIN_FILE": "${workspaceFolder}/src/external/vcpkg/scripts/buildsystems/vcpkg.cmake",
-    "VCPKG_BUILD": "ON"
+    "VCPKG_TARGET_ARCHITECTURE": "x64",
+    "VCPKG_CRT_LINKAGE": "static",
+    "VCPKG_LIBRARY_LINKAGE": "static",
+    "VCPKG_BUILD": "ON",
+    "CMAKE_TOOLCHAIN_FILE": "${workspaceFolder}/src/external/vcpkg/scripts/buildsystems/vcpkg.cmake"
+  },
+  "files.associations": {
+    "bit": "cpp",
+    "cctype": "cpp",
+    "compare": "cpp",
+    "concepts": "cpp",
+    "cstddef": "cpp",
+    "cstdint": "cpp",
+    "cstdio": "cpp",
+    "cstdlib": "cpp",
+    "cstring": "cpp",
+    "cwchar": "cpp",
+    "exception": "cpp",
+    "initializer_list": "cpp",
+    "iosfwd": "cpp",
+    "limits": "cpp",
+    "new": "cpp",
+    "stdexcept": "cpp",
+    "string": "cpp",
+    "tuple": "cpp",
+    "type_traits": "cpp",
+    "utility": "cpp",
+    "xmemory": "cpp",
+    "xstddef": "cpp",
+    "xstring": "cpp",
+    "xtr1common": "cpp",
+    "xutility": "cpp"
   }
 }
