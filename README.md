@@ -1,8 +1,8 @@
 # GUI
 
-Minimalistic Wrapper for a Dear ImGui application using GLFW3, GLAD and OpenGL inspired by [Walnut](https://github.com/TheCherno/Walnut.git) written by Yan Chernikov.
+Minimalistic Wrapper for a Dear ImGui application using GLFW3, GLAD and OpenGL. It was inspired by [Walnut](https://github.com/TheCherno/Walnut.git) written by Yan Chernikov but uses OpenGL instead of Vulkan.
 
-Following the principles of IMGUI (Immediate Mode GUI), the state is owned by the client code and is passed to the renderer for each frame. The `gui::platform` and `gui::application` classes are wrappers that hide implementation details of Dear ImGui/GLFW3/glad and OpenGL and use the RAII technique to make the C code slightly safer.
+Following the principles of IMGUI (Immediate Mode GUI), the state is owned by the client code and is passed to the renderer for each frame. The `gui::platform` and `gui::application` classes provide wrappers that hide implementation details of Dear ImGui/GLFW3/glad and OpenGL and use the RAII technique to make the C code slightly safer.
 
 # Disclaimer
 
