@@ -45,6 +45,6 @@ This is your usual Dear ImGui rendering code that you start with `ImGui::Begin` 
 The `render.hpp` and `render.cpp` files provide an example of the user code. It is adopted from the brilliant [Dear ImGui demo](https://github.com/ocornut/imgui/blob/master/examples/example_glfw_opengl3/main.cpp). Please note that the original demo does not use `glad`. If you choose to use it, insert the following code before calling any OpenGL functions:
 
 ```C++
-	if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
-		// Fatal error loading OpenGL
+if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
+	// Fatal error loading OpenGL
 ```
