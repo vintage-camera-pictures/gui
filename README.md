@@ -12,9 +12,9 @@ The code in this repository is not production-ready software. It comes with no s
 
 Here are the steps:
 
-1. Create a structure to hold your state. We'll call it `application_state`, you can call it differently if you like.
+- Create a structure to hold your state. We'll call it `application_state`, you can call it differently if you like.
 
-1. Write the `render` function with the following signature:
+- Write the `render` function with the following signature:
 
 ```C
 void render(gui::platform& platform, application_state& state);
@@ -22,19 +22,19 @@ void render(gui::platform& platform, application_state& state);
 
 This is your usual Dear ImGui rendering code that you start with `ImGui::Begin` and end with `ImGui::End`
 
-1. Instantiate `gui::application<application_state>` object, passing the main window title and the render function to the constructor.
+- Instantiate `gui::application<application_state>` object, passing the main window title and the render function to the constructor.
 
 ```C
     gui::application<application_state> application("Welcome", render);
 ```
 
-1. Create an instance of `application_state` and change the default values if required.
+- Create an instance of `application_state` and change the default values if required.
 
 ```C
     application_state state;
 ```
 
-1. Start the application
+- Start the application
 
 ```C
     application.run(state)
