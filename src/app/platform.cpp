@@ -10,11 +10,6 @@
 #include <string>
 
 
-namespace gui_font {
-    #include "Roboto-Regular.embed"
-}
-
-
 namespace {
 static void glfw_error_callback(int error, const char* description) {
     const std::string error_message = "GLFW Error " + std::to_string(error) + description;
@@ -108,15 +103,6 @@ context::context() {
         style.WindowRounding = 0.0f;
         style.Colors[ImGuiCol_WindowBg].w = 1.0f;
     }
-
-    ImFontConfig fontConfig;
-    fontConfig.FontDataOwnedByAtlas = false;
-    ImFont* robotoFont = imgui_io.Fonts->AddFontFromMemoryTTF((void*)gui_font::g_RobotoRegular, 
-                                                        sizeof(gui_font::g_RobotoRegular), 
-                                                        20.0f, 
-                                                        &fontConfig);
-    imgui_io.FontDefault = robotoFont;
-
 
 }
 

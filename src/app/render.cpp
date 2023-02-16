@@ -1,10 +1,6 @@
-#include "application.hpp"
+#include "render.hpp"
 
-struct application_state {
-    bool show_demo_window{true};
-    bool show_another_window{false};
-    float clear_color[3] = {0.1f, 0.1f, 0.1f};
-};
+namespace app {
 
 void render(gui::platform& platform, application_state& state) {
 
@@ -24,7 +20,7 @@ void render(gui::platform& platform, application_state& state) {
         ImGui::Checkbox("Another Window", &state.show_another_window);
 
         ImGui::SliderFloat("float", &f, 0.0f, 1.0f);            // Edit 1 float using a slider from 0.0f to 1.0f
-        ImGui::ColorEdit3("clear color", state.clear_color); // Edit 3 floats representing a color
+        ImGui::ColorEdit3("clear color", platform.clear_color); // Edit 3 floats representing a color
 
         if (ImGui::Button("Button"))                            // Buttons return true when clicked (most widgets return true when edited/activated)
             counter++;
@@ -46,22 +42,4 @@ void render(gui::platform& platform, application_state& state) {
     }
 }
 
-
-
-int main(int, char**)
-{
-    application_state as;
-    gui::application<application_state> application("Welcome", render); 
-
-    ImGui::StyleColorsDark();
-
-    gui::platform& p = application.get_platform();
-    p.clear_color[0] = 0.2f;
-    p.clear_color[1] = 0.2f;
-    p.clear_color[2] = 0.2f;
-    p.clear_color[3] = 1.0f;
-
-    application.run(as);
-
-    return 0;
 }

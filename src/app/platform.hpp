@@ -1,7 +1,9 @@
 #ifndef GUI_PLATFORM_CLASS_HEADER
 #define GUI_PLATFORM_CLASS_HEADER
 
-#include <GLFW/glfw3.h> 
+#include <imgui.h>     // ImGuiIO
+#include <imgui_impl_glfw.h>   // GLFWwindow
+
 #include <string>
 
 namespace gui {
