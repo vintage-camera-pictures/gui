@@ -4,7 +4,7 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
-#include "application.hpp"
+#include "platform.hpp"
 
 #include <stdexcept>
 #include <string>
@@ -73,14 +73,14 @@ GLFWwindow* window::get() const {
 }
 
 
-application::application() {
+initialiser::initialiser() {
     glfwSetErrorCallback(glfw_error_callback);
     if (!glfwInit()) {
         throw std::runtime_error("Unable to initialise GLFW");
     }
 }
 
-application::~application() {
+initialiser::~initialiser() {
     glfwTerminate();
 }
 
@@ -127,5 +127,13 @@ context::~context() {
 ImGuiIO& context::io() const {
     return ImGui::GetIO();
 }
+
+
+platform::platform(const char* title)
+: w(title)
+, b(w)
+{    
+}
+
 
 }

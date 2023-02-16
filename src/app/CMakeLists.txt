@@ -5,10 +5,11 @@ find_package(imgui CONFIG REQUIRED)
 
 set(GUI_HEADER_FILES
     application.hpp
+    platform.hpp
 )
 
 set(GUI_SOURCE_FILES
-    application.cpp
+    platform.cpp
     gui.cpp
 )
 
